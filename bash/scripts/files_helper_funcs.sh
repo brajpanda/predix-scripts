@@ -142,6 +142,7 @@ function __checkoutTags
 function getRepoURL {
 	local  repoURLVar=$2
 	reponame=$(echo "$1" | awk -F "/" '{print $NF}')
+	echo "here is the error"
 	echo reponame=$reponame
 	url=$( jq -r --arg repo "$reponame" .dependencies[\$repo]  $3 | awk -F"#" '{print $1}')
 	echo "url=$url"
