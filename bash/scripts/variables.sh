@@ -36,13 +36,13 @@ MOBILE_STARTER_APP_NAME="$INSTANCE_PREPENDER-predix-mobile-starter"
 ############### UAA Configurations ###############
 
 # The username of the new user to authenticate with the application
-UAA_USER_NAME="app_user_1"
+UAA_USER_NAME="mckuser"
 
 # The email address of username above
-UAA_USER_EMAIL="app_user_1@ge.com"
+UAA_USER_EMAIL="brajabhusan_panda@mckinsey.com"
 
 # The password of the user above
-UAA_USER_PASSWORD="app_user_1"
+UAA_USER_PASSWORD="mckuser"
 
 # The secret of the Admin client ID (Administrator Credentails)
 if [[ $UAA_ADMIN_SECRET == "" ]]; then
