@@ -143,8 +143,7 @@ function getRepoURL {
 	local  repoURLVar=$2
 	reponame=$(echo "$1" | awk -F "/" '{print $NF}')
 	echo reponame=$reponame
-	#url=$( jq -r --arg repo "$reponame" .dependencies[\$repo]  $3 | awk -F"#" '{print $1}')
-	url="https://github.com/brajpanda/predix-rmd-ref-app"
+	url=$( jq -r --arg repo "$reponame" .dependencies[\$repo]  $3 | awk -F"#" '{print $1}')
 	echo "url=$url"
 	#url=$(echo "$a" | sed -n "/$reponame/p" $rootDir/../../version.json | awk -F"\"" '{print $4}' | awk -F"#" '{print $1}')
 	eval $repoURLVar="'$url'"
